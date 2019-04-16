@@ -65,8 +65,8 @@ def welcome():
         if len(email)<3 or len(email)>20:
             email_error="Email must be between 3 and 20 characters"
 
-       # elif '.' in email >1 or '@' in email>1:
-        #    email_error=". or @ should not exceed one."
+        elif email.count(".")>1:
+           email_error=". or @ should not exceed one."
 
         elif " " in email:
             email_error="Email should not contain any spaces."
